@@ -1,5 +1,5 @@
 import tkinter
-import RPi.GPIO as GPIO
+# import RPi.GPIO as GPIO
 # BoxParameter  class named as BP
 class bp:
     x1_base = 25
@@ -115,6 +115,8 @@ B  = tkinter.Button(Canvas1.Demo, text="change", command=changeColor)
 B2 = tkinter.Button(Canvas1.Demo, text="move", command=changeBox)
 B.pack(side = "left")
 B2.pack(side = "right")
+logo = tkinter.PhotoImage(file='amphan.png')
+BoxClass.canvas.create_image(250, 380, image=logo)
 Canvas1.Demo.title("Nurse Call Demo")
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(4, GPIO.IN, pull_up_down=GPIO.PUD_UP)
